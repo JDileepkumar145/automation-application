@@ -7,5 +7,16 @@ pipeline {
                 echo 'Hello World'
             }
         }
+
+         stage('CI') {
+            steps {
+                echo 'code sent to artifactory'
+            }
+        }
+         stage('CD') {
+            steps {
+                echo 'deploy to apache'
+            }
+        }
     }
 }
